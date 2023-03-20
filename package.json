@@ -1,0 +1,27 @@
+{
+  "name": "clinique-vet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite --host --port 8080",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manja2012/clinique-vet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manja2012/clinique-vet/issues"
+  },
+  "homepage": "https://github.com/Manja2012/clinique-vet#readme",
+  "devDependencies": {
+    "@vitejs/plugin-react": "^3.1.0",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.59.3",
+    "vite": "^4.2.0"
+  }
+}
