@@ -1,8 +1,14 @@
-body {
-    background-color: aquamarine;
-}
+@import '../components/template/headerFooter.scss';
+@import '../sass/base.scss';
+@import '../sass/variables.scss';
+@import '../sass/hidden.scss';
+@import '../pages/homePage/homePage.scss';
+@import '../pages/contacts/contacts.scss';
+@import '../pages/PrendreRDV/PrendreRDV.scss';
+@import '../components/Welcome/welcome.scss';
+@import '../components/ClinicDescription/clinicDescription.scss';
+@import '../components/MobileVersion/mobileVersion.scss';
+@import '../components/ClinicFunctions/clinicFunctions.scss';
+@import '../components/Service/service.scss';
+@import '../components/Team/team.scss';
 
-.g {
-    background-color: aquamarine;
-    border: 2 solid tomato;
-}
