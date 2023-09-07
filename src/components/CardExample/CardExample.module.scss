@@ -1,0 +1,47 @@
+.card{
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image{
+    border-radius: 8px;
+    width: 350px;
+    margin: 0 auto;
+    @media screen and (min-width: 768px) {
+      width: 325px;
+      height: 255px;
+   }
+   @media screen and (min-width: 1200px) {
+     width: 550px;
+     height: 450px;
+  }
+  }
+  &__text{
+    padding: 10px;
+    margin-top: 28px;
+    font-size: 20px;
+    line-height: 29px;
+    color: var( --text-color);
+    @media screen and (min-width: 768px) {
+      padding: 20px;
+      margin-top: 0;
+      text-align: left;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+  &__list{
+    padding: 20px 24px;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+    @media screen and (min-width:768px) and (max-width:1199px){
+    flex-grow: 1;
+    }
+  }
+}
+
+ 

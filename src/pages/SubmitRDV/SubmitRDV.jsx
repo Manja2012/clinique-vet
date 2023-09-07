@@ -1,5 +1,8 @@
-import React from "react"
+import React from "react";
 import { useLocation } from 'react-router-dom';
+import PageTitle from '../../components/PageTitle/PageTitle';
+import style from './SubmitRDV.module.scss';
+import css from '../../sass/Base.module.scss';
 
 function SubmitRDV(){
   const location = useLocation();
@@ -11,13 +14,16 @@ function SubmitRDV(){
   const specialite = queryParams.get('specialite');
   
   return (
-    <main>
-        <div>
-            <div>Date du RDV : {dateRDV}</div>
-            <div>Nom : {nom}</div>
-            <div>E-mail : {email}</div>
-            <div>Spécialité : {specialite}</div>
+    <main className={css.section}>
+      <div className={css.container}>
+        <PageTitle text="Votre RDV:"/>
+        <div className={style.submit}>
+          <div className={style.submit__text}>Date du RDV : {dateRDV}</div>
+          <div className={style.submit__text}>Nom : {nom}</div>
+          <div className={style.submit__text}>E-mail : {email}</div>
+          <div className={style.submit__text}>Spécialité : {specialite}</div>
         </div>
+      </div>
     </main>
     
   )

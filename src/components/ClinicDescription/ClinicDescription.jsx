@@ -1,19 +1,26 @@
+import PageTitle from '../PageTitle/PageTitle';
+import CardExample from '../CardExample/CardExample';
+import cardExamples from '../CardExample/card-examples';
+import style from './ClinicDescription.module.scss'
+import css from '../../sass/Base.module.scss'
 const ClinicsDescription = () =>{  
 
-    return(
-      <section className="mobil">
-        <div className="container">
-          <h2 className="mobil__title">Urgences et Consultants vétérinaires Clinique  vétérinaire d'urgences</h2>
-        <div>
-          <div className="flex">
-            <img className="mobil__image image-homePage" src="/img/cat.jpg" alt="cat" />
-            <p className="mobil__text">Lorem ipsum dolor sit amet consectetur. Sit amet facilisi massa lacus quam sed enim turpis dignissim. Lecea amet mi. Lacus erat habitasse turpis semper nunc massa Lorem ipsum dolor sit amet consectetur. Sit amet facilisi massa lacus quam sed enim turpis dignissim. Lecea amet mi. Lacus erat habitasse turpis semper nunc massa  </p>
-          </div>
-          <div className="tablet flex">
-            <p className="mobil__text">Lorem ipsum dolor sit amet consectetur. Sit amet facilisi massa lacus quam sed enim turpis dignissim. Lecea amet mi. Lacus erat habitasse turpis semper nunc massa Lorem ipsum dolor sit amet consectetur. Sit amet facilisi massa lacus quam sed enim turpis dignissim. Lecea amet mi. Lacus erat habitasse turpis semper nunc massa  </p>
-            <img className="mobil__image image-homePage" src="/img/dog-trimmer.jpg" alt="dog-trimmer"/>
-          </div>
-        </div>
+  return(
+    <section className={css.section}>
+      <div className={css.container}>
+        <PageTitle text="Urgences et Consultants vétérinaires Clinique  vétérinaire d'urgences"/>
+        {
+          cardExamples.map(card => (
+          <li className={style.card__list} key={card.alt}>
+          <CardExample
+            img={card.img}
+            description={card.description}
+            alt={card.alt}
+            imageToLeft={card.imageToLeft}
+          />
+        </li>
+          )) 
+        }
       </div>
     </section>
     )

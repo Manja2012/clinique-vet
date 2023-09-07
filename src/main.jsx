@@ -1,6 +1,6 @@
 import React from 'react'
-import './sass/style.scss'
 import 'normalize.css'
+import './sass/style.scss'
 
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'

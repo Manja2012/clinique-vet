@@ -114,7 +114,7 @@ function Template(){
             </ul>
         </div>
         <div className="footer_list">
-          <Link href="#" className="social__link">
+          <Link t="#" className="social__link">
             <svg width="40" height="40" className="social__icon">
                 <use href="images/icons.svg#icon-facebook">
                 </use>

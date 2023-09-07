@@ -36,9 +36,26 @@ li{
       width: 1200px;
    }
 }
+.section{
+  padding: 60px;
+  text-align: center;
+}
 .padding{
    padding: 10px;
 }
+.tablet{
+   display: none;
+   @media screen and (min-width: 768px) {
+     display: block;
+   }
+ }
+ .flex{
+   @media screen and (min-width: 768px) {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   }
+ }  
 body {
    font-family: 'Tiro Tamil', serif ;
    font-weight: 400;
