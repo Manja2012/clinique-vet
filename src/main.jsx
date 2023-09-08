@@ -11,7 +11,7 @@ import App from './App.jsx';
 const root = createRoot(document.getElementById('app'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/clinique-vet">
       <App />
     </BrowserRouter>
   </React.StrictMode>
