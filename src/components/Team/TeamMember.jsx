@@ -14,18 +14,11 @@ const TeamMember = ({ description, to, name, img, specialty, fbProfile, instagra
         <div className={style.team__exampl}>
             <h2 className={style.team__title}>{name}</h2>
             <p className={style.team__text}>{specialty}</p>
-            {
-              fbProfile && 
-                <Social fbProfile={fbProfile} />
-            }
-             {/* {
-              instagramProfile && 
-                <Social instagramProfile={instagramProfile} />
-            }
-             {
-              ldProfile && 
-                <Social ldProfile={ldProfile} />
-            } */}
+            <Social
+              fbProfile={fbProfile}
+              instagramProfile={instagramProfile}
+              ldProfile={ldProfile}
+            />
         </div>
       </>
     );

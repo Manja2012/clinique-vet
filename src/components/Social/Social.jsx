@@ -10,21 +10,30 @@ const Social = ({ fbProfile, instagramProfile, ldProfile  }) => {
 
   return(
     <ul className={style.social}>
-      <li className={style.social__item}>
-        <Link to={fbProfile} className={style.social__link}>
-          <BsFacebook className={style.social__icon}/>
-        </Link>
-      </li>
-      <li className={style.social__item}>
-        <Link to={instagramProfile} className={style.social__link}>
-          <BsInstagram className={style.social__icon}/>
-        </Link>
-      </li>
-      <li className={style.social__item}>
-        <Link to={ldProfile} className={style.social__link}>
-          <BsLinkedin  className={style.social__icon}/>
-        </Link>
-      </li>
+      {
+        fbProfile && 
+          <li className={style.social__item}>
+            <Link to={fbProfile} className={style.social__link}>
+              <BsFacebook className={style.social__icon}/>
+            </Link>
+          </li>
+      }
+      {
+        instagramProfile && 
+        <li className={style.social__item}>
+            <Link to={instagramProfile} className={style.social__link}>
+              <BsInstagram className={style.social__icon}/>
+            </Link>
+          </li>
+      }
+      {
+        ldProfile && 
+          <li className={style.social__item}>
+            <Link to={ldProfile} className={style.social__link}>
+              <BsLinkedin  className={style.social__icon}/>
+            </Link>
+          </li>
+      }
     </ul>
   )
 }

@@ -1,11 +1,18 @@
-.card__list{
-  padding: 20px 24px;
+.cards {
+  @media screen and (min-width:768px) {
+    .card__item {
+      display: flex;
+    }
+    :nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.card__item {
   border-left: 1px solid #EEEEEE;
   border-right: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE;
-  @media screen and (min-width:768px) and (max-width:1199px){
-  flex-grow: 1;
-  }
 }
 // .mobil{
 //     padding: 24px;

@@ -62,7 +62,7 @@
       to right,
     rgba(47, 48, 58, 0.4),
     rgba(47, 48, 58 ,0.4)),  
-    url('/img/main_photo_small.jpg');
+    url('/src/images/main_photo_small.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -72,7 +72,7 @@
           to right,
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58 ,0.4)),  
-          url('/img/main_photo.jpg'); 
+          url('/src/images/main_photo.jpg'); 
     }
     @media screen and (min-width: 1200px) {
       min-height: 600px;
