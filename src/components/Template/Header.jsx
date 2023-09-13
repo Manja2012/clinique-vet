@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, NavLink} from "react-router-dom";
 import Logo from "../../images/logo.jpg";
+import { GrClose } from "react-icons/gr";
+ import { GrMenu } from "react-icons/gr";
 import style from './Header.module.scss';
 
 const Header = () => {
@@ -58,10 +60,8 @@ const Header = () => {
         </nav>  
         <div className={style.mobil_header}>
           <button onClick={handleIsOpen} className={`${style.menu_button} ${isOpen ? style.is_open : ''}`}>
-            <svg width="40" height="40" aria-label="menu_mobile">
-              <use className={style.icon_close} href="/src/images/icos.svg#icon-close_40px"></use>
-              <use className={style.icon_menu} href="/src/images/icos.svg#icon-menu"></use>
-            </svg>
+            <GrClose aria-label="menu_mobile" className={style.icon_close} size={40} />
+            <GrMenu aria-label="menu_mobile" className={style.icon_menu} size={40}/>
           </button>
         </div>
       </div>

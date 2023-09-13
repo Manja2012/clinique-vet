@@ -1,6 +1,8 @@
 /* Стиль для основного инпута */
 .submit{
+  width: 100%;
     text-align: center;
+    padding: 20px;
     border: 2px solid var(--accent-color);
       &__title{
       font-size: 48px;
@@ -15,8 +17,12 @@
       border: 1px solid;
       }
       &__text{
-        font-size: 36px;
-        line-height: 52px;
+        font-size: 26px;
+        line-height: 32px;
+        // @media screen and (min-width: 768px) {
+        //   font-size: 32px;
+        //   line-height: 52px; 
+        // }
       }
       &__button{
         margin-top: 50px;

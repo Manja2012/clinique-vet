@@ -113,9 +113,10 @@ background-color: var(--accent-color-hover);
 .menu_button:hover, .menu_button:focus {
   fill: var(--accent-color-hover);
 }
-@media screen and (min-width: 768px) {
-  .menu_button {
-    display: none;
+
+.menu_button {
+  @media screen and (min-width: 768px) {
+  display: none;
   }
 }
 .menu_button.is_open {
@@ -132,6 +133,7 @@ background-color: var(--accent-color-hover);
 
 .menu_button.is_open .icon_close {
   display: block;
+  
 }
 
 .menu_button.is_open .icon_menu {
