@@ -33,15 +33,25 @@
       line-height: 40px;
     }
   }
-  &__list{
+  &__item {
     padding: 20px 24px;
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
-    @media screen and (min-width:768px) and (max-width:1199px){
-    flex-grow: 1;
+      @media screen and (min-width:768px) and (max-width:1199px){
+      flex-grow: 1;
+      }
+  }
+  &__list {
+  @media screen and (min-width:768px) {
+    .card__item {
+      display: flex;
+    }
+    :nth-child(even) {
+      flex-direction: row-reverse;
     }
   }
+}
 }
 
  

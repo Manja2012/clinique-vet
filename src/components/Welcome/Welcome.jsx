@@ -1,14 +1,17 @@
+import { Link } from "react-router-dom";
+import style from './Welcome.module.scss';
+import css from '../../sass/Base.module.scss';
 const Welcome = () =>{  
 
-    return(
-    <div>
-      <section className="clinic-presentation">
-        <div className="container ">
-          <h1 className="main__title"> Bienvenue chez BIOMIR</h1>
-          <a href="/rdv"><button type="button" className="button main__button button--hero">Prendre RDV</button></a>
+  return(
+    <>
+      <section className={style.clinic_presentation}>
+        <div className={css.container}>
+          <h1 className={style.main__title}> Bienvenue chez BIOMIR</h1>
+          <Link to="/rdv"><button type="button" className={style.button}>Prendre RDV</button></Link>
         </div>
       </section>
-    </div>
-    )
+    </>
+  )
 }
 export default Welcome;

@@ -1,6 +1,7 @@
 /* Стиль для основного инпута */
 .submit{
     text-align: center;
+    border: 2px solid var(--accent-color);
       &__title{
       font-size: 48px;
       line-height: 69px;

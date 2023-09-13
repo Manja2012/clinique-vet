@@ -6,4 +6,5 @@ const TeamBg = () =>{
     <div className={style.bg}></div>
   )
 }
+
 export default TeamBg;

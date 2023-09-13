@@ -1,23 +1,22 @@
 import PageTitle from '../PageTitle/PageTitle';
 import CardExample from '../CardExample/CardExample';
 import cardExamples from '../CardExample/card-examples';
-import css from './ClinicDescription.module.scss'
-import baseCss from '../../sass/Base.module.scss'
+import style from '../CardExample/CardExample.module.scss';
+import css from '../../sass/Base.module.scss';
 const ClinicsDescription = () =>{  
 
   return(
-    <section className={baseCss.section}>
-      <div className={baseCss.container}>
+    <section className={css.section}>
+      <div className={css.container}>
         <PageTitle text="Urgences et Consultants vétérinaires Clinique  vétérinaire d'urgences"/>
-        <ul className={css.cards}>
+        <ul className={style.card__list}>
         {
           cardExamples.map(card => (
-            <li className={css.card__item} key={card.alt}>
+            <li className={style.card__item} key={card.alt}>
               <CardExample
                 img={card.img}
                 description={card.description}
                 alt={card.alt}
-                imageToLeft={card.imageToLeft}
               />
             </li>
           )) 

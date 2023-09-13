@@ -1,6 +1,6 @@
 import Team from '../../components/Team/Team.jsx';
 import PageTitle from '../../components/PageTitle/PageTitle.jsx';
-import TeamBg from '../../components/TeamBg/TeamBg.jsx';
+import TeamBg from '../../components/Team/TeamBg.jsx';
 const TeamPage = () =>{  
 
   return(

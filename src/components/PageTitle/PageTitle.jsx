@@ -6,7 +6,6 @@ const PageTitle = ({text}) => {
       <h1 className={style.title}>{text}</h1>
     </div>
   )
-    
 }
 
 export default PageTitle;

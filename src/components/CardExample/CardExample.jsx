@@ -1,6 +1,6 @@
 import style from './CardExample.module.scss';
 
-const CardExample = ({ imageToLeft, description, alt, img}) => {
+const CardExample = ({ description, alt, img}) => {
   return (
     <>
       <img className={style.card__image} src={img} alt={alt} />

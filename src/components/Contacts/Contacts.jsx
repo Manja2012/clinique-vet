@@ -1,5 +1,5 @@
 import PageTitle from '../PageTitle/PageTitle';
-import style from './Contacts.module.scss';
+import style from './ContactsForm.module.scss';
 import css from '../../sass/Base.module.scss';
 
 const Contacts = () => {

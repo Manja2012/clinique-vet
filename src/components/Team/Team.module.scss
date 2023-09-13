@@ -6,26 +6,19 @@
   @media screen and (min-width:768px){
   display: flex;
   justify-content: center;
-  
   }
 }
-
 .team__image{
   border-radius: 8px;
-    width: 350px;
-    margin: 0 auto;
-    @media screen and (min-width: 768px) {
-      width: 325px;
-      height: 255px;
-   }
-   @media screen and (min-width: 1200px) {
-     
+  width: 350px;
+  margin: 0 auto;
+  @media screen and (min-width: 768px) {
+    width: 325px;
+    height: 255px;
   }
 }
-
 .team__title{
   margin-bottom: 4px;
-
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -64,8 +57,6 @@
   &:not(:last-child){
   margin-bottom: 30px;
   }
-  
-  
 }
 .team__overlay{
   position: relative;
@@ -104,11 +95,10 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   @media screen and (min-width:768px) and (max-width:1199px){
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      
-      }
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    }
 
   &:hover,
   &:focus{

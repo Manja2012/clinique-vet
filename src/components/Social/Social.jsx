@@ -1,10 +1,8 @@
-import { Link } from "react-router-dom"
-
-import style from './Social.module.scss'
-
+import { Link } from "react-router-dom";
 import { BsFacebook } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
+import style from './Social.module.scss';
 
 const Social = ({ fbProfile, instagramProfile, ldProfile  }) => {
 
