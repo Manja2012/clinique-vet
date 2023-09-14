@@ -8,7 +8,7 @@ const SubmitRDVForm = () => {
   const dateRDV = queryParams.get('rdv');
   const nom = queryParams.get('lastName');
   const email = queryParams.get('email');
-  const specialite = queryParams.get('specialite');
+  const veterinaire = queryParams.get('veterinaire');
 
   return(
 
@@ -16,7 +16,7 @@ const SubmitRDVForm = () => {
     <div className={style.submit__text}>Date du RDV : {dateRDV}</div>
     <div className={style.submit__text}>Nom : {nom}</div>
     <div className={style.submit__text}>E-mail : {email}</div>
-    <div className={style.submit__text}>Spécialité : {specialite}</div>
+    <div className={style.submit__text}>Nom du vétérinaire : {veterinaire}</div>
   </div>
 
   )

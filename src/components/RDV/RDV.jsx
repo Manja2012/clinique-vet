@@ -9,12 +9,12 @@ const RDV = () =>{
       <div className={style.form} >
         <form action="/submitRDV">
           <div>
-            <label className={style.form__label} htmlFor="spécialité">Choisissez la specialite du vétérinaire</label> 
-            <select className={style.form__input} required type="text" placeholder="Rechercher par spécialité" name="specialite" id="specialite">
+            <label className={style.form__label} htmlFor="veterinaire">Choisissez le nom du vétérinaire</label> 
+            <select className={style.form__input} required type="text" placeholder="Rechercher par nom du vétérinaire" name="veterinaire" id="veteinaire">
               <option value="">[Choisissez une option]</option>
-              <option value="marianna">Dr. Alexandre Shulesho</option>
-              <option value="marianna">Dr. Nikolai Glushkov</option>
-              <option value="marianna">Dr. Elina Avezova</option>
+              <option value="Dr. Alexandre Shulesho">Dr. Alexandre Shulesho</option>
+              <option value="Dr. Nikolai Glushkov">Dr. Nikolai Glushkov</option>
+              <option value="Dr. Elina Avezova">Dr. Elina Avezova</option>
             </select>
           </div>
           <div>
