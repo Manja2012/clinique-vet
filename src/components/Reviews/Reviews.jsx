@@ -1,28 +1,46 @@
-const Welcome = () =>{  
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import PageTitle from '../PageTitle/PageTitle';  
+import ReviewCard from './ReviewCard';
+import {reviewsRoute} from '../../api/routes'
+import css from '../../sass/Base.module.scss';
+import style from './Reviews.module.scss';
 
+const Reviews = () =>{  
+
+  const [review, setReview] = useState([]);
+  
+  useEffect(() => {
+    const fetchReview = async () => {
+        try{
+            const {data} = await axios.get(reviewsRoute)
+            setReview(data) 
+        }catch(error){
+            console.log(error)
+        }
+    }
+    fetchReview()
+  },[])
+    
     return(
-      <section className="mobil">
-        <div className="container ">
-          <h2 className="mobil__title">Les avis de nos clients</h2>
-          <ul className="flex">
-            <li className="reviews">
-              <span className="stars">⭐⭐⭐⭐⭐</span>
-              <p className="mobil__reviews-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ducimus beatae eum molestiae repellat hic molestias cum porro accusantium minima. Possimus doloremque, quia aliquid animi labore fugit numquam repellendus quo.</p>
-              <p className="mobil__reviews-name">nom prenom</p>
-            </li>
-            <li className="reviews">
-              <span className="stars">⭐⭐⭐⭐⭐</span>
-              <p className="mobil__reviews-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, illo rem, fugiat animi in, corporis recusandae facere adipisci maxime exercitationem alias deleniti consequuntur velit laborum. Maxime iure nobis quisquam ipsam!</p>
-              <p className="mobil__reviews-name">nom prenom</p>
-            </li>
-            <li className="reviews">
-            <span className="stars">⭐⭐⭐⭐⭐</span>
-              <p className="mobil__reviews-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ad voluptate reiciendis labore dignissimos aperiam aspernatur enim animi, ab, magni id hic beatae accusamus quae nostrum esse. Officia, ducimus possimus?</p>
-              <p className="mobil__reviews-name">nom prenom</p>
-            </li>
+      <section className={css.section}>
+        <div className={css.container}>
+        <PageTitle text="Les avis de nos clients"/>
+          <ul className={style.reviews}>
+            {
+              review.map(card => (
+                <li className={style.reviews__item} key={card.name}>
+                  <ReviewCard
+                    name={card.name}
+                    review={card.review}
+                    rating={card.rating}
+                  />
+                </li>
+              ))
+            }
           </ul>
         </div>
       </section>   
     )
 }
-export default Welcome;
+export default Reviews;

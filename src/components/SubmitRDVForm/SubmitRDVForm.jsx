@@ -5,8 +5,8 @@ const SubmitRDVForm = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
 
-  const dateRDV = queryParams.get('rdv');
-  const nom = queryParams.get('lastName');
+  const dateRDV = queryParams.get('date');
+  const nom = queryParams.get('name');
   const email = queryParams.get('email');
   const veterinaire = queryParams.get('veterinaire');
 

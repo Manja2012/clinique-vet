@@ -1,28 +1,29 @@
 /* Стиль для основного инпута */
-.submit{
+.submit {
   width: 100%;
   text-align: center;
   padding: 20px;
-    &__title{
+  &__title {
     font-size: 48px;
     line-height: 69px;
     color: var(--accent-color);
-    }
-    &__input {
+  }
+  &__input {
     padding: 18px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
     border: 1px solid;
-    }
-    &__text{
-      font-size: 26px;
-      line-height: 32px;
-    }
-    &__button{
-      margin-top: 50px;
-      margin-bottom: 50px;
-      padding:10px 32px ;
+  }
+  &__text {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  &__button {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding:10px 32px ;
     min-width: 100px;
     font-family: inherit;
     background-color: var(--accent-color);
@@ -42,10 +43,10 @@
         
     &:hover,
     &:focus{
-    background-color: var(--accent-color-hover);  
-    }
+      background-color: var(--accent-color-hover);  
     }
   }
+}
   
   
     

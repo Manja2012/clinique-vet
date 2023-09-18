@@ -1,40 +1,34 @@
 import { useState } from "react";
-import style from './ContactsForm.module.scss';
 import Dog_contacts from '../../images/dog_contacts.jpg'; 
+import { sendMessage } from '../../business/send-message.js'
+import style from './ContactsForm.module.scss';
+
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL
 
 const ContactsForm = () => {
-   
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
+  const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
-    console.log(firstName)
-    console.log(lastName)
+    event.currentTarget.reset()
 
+    await sendMessage({
+      email,
+      name,
+      phone,
+      message
+    })
   }
-  
-    // 3 façons de declarer une fonction anonyme
-  
-    // function(event) {
-    //   setLastName(event.target.value)
-    // }
-  
-    // (event) => {
-    //   setLastName(event.target.value)
-    // }
-  
-    // (event) => setLastName(event.target.value)
   
   return (
     <main className={style.flex}>
       <div className={style.form} id="paiement">
         <form onSubmit={handleSubmit}>
-          <label className={style.form__label} htmlFor="lastName">Nom complet</label>
-          <input className={style.form__input} required type="text" name="lastName" id="lastName" onChange={(event) => setLastName(event.target.value)} />
+          <label className={style.form__label} htmlFor="name">Nom complet</label>
+          <input className={style.form__input} required type="text" name="name" id="name" onChange={(event) => setName(event.target.value)} />
           <label className={style.form__label} htmlFor="email">Email</label>
           <input className={style.form__input} required type="email" name="email" id="email" onChange={(event) => setEmail(event.target.value)} />
           <label className={style.form__label} htmlFor="phone">Numéro de téléphone</label>
