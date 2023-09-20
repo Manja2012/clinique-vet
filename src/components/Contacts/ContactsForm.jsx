@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Dog_contacts from '../../images/dog_contacts.jpg'; 
-import { sendMessage } from '../../business/send-message.js'
+import { sendMessage } from '../../api/api-client.js'
 import style from './ContactsForm.module.scss';
 
 const apiBaseUrl = import.meta.env.VITE_API_BASE_URL
@@ -24,8 +24,8 @@ const ContactsForm = () => {
   }
   
   return (
-    <main className={style.flex}>
-      <div className={style.form} id="paiement">
+    <section className={style.flex}>
+      <div className={style.form} id="contacts">
         <form onSubmit={handleSubmit}>
           <label className={style.form__label} htmlFor="name">Nom complet</label>
           <input className={style.form__input} required type="text" name="name" id="name" onChange={(event) => setName(event.target.value)} />
@@ -41,7 +41,7 @@ const ContactsForm = () => {
       <div className={style.form__image}>
         <img className={style.form__photo} src={Dog_contacts} alt='dog_contacts' />
       </div>
-    </main>
+    </section>
   )
 }
 

@@ -16,6 +16,7 @@
       }
     }  
   .button{
+    margin-top: 30px;
     padding:10px 32px ;
     min-width: 100px;
     font-family: inherit;
@@ -39,10 +40,10 @@
     background-color: var(--accent-color-hover);  
     }
     @media screen and (min-width:768px){
-      margin-top: 100px;
+      margin-top: 70px;
     }
     @media screen and (min-width:1200px){
-    margin-top: 180px; 
+    margin-top: 200px; 
     min-width: 400px;
     font-weight: 400;
     font-size: 62px;

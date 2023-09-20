@@ -16,7 +16,7 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path='/rdv' element={<PrendreRDV />} />
         <Route path='/contacts' element={<ContactsPage/>} />
-        <Route path='/submitRDV' element={<SubmitRDV/>} />
+        <Route path='/submitRDV/:id' element={<SubmitRDV/>} />
         <Route path='/clinic' element={<ClinicPage/>} />
         <Route path='/service' element={<ServicePage/>} />
         <Route path='/team' element={<TeamPage/>} />

@@ -15,7 +15,7 @@ const ReviewCard = ({name, review, rating}) => {
       <div className={style.rating}>{rating}/5</div>
       <p className={`${style.reviews__text} ${style.content} ${expanded ? style.expanded : ''}`}>{review}</p>
       <p className={style.reviews__name}>{name}</p>
-      <button onClick={toggleExpanded}>{expanded ? 'Сacher' : 'En savoir plus'}</button>
+      <button onClick={toggleExpanded}>{expanded ? 'Masquer' : 'En savoir plus'}</button>
     </>
   );
 }

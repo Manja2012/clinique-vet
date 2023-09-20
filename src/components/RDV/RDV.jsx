@@ -5,7 +5,7 @@ import Cat from '../../images/cat_prendre_rdv.jpg';
 import style from '../Contacts/ContactsForm.module.scss';
 import baseStyle from '../../sass/Base.module.scss';
 
-import { saveAppointment } from '../../business/save-appointment'
+import { saveAppointment } from '../../api/api-client.js'
 
 const RDV = () =>{
   const [veterinaire, setVeterinaire] = useState('')
@@ -15,35 +15,22 @@ const RDV = () =>{
   const [isSaving, setSaving] = useState(false)
 
   const navigate = useNavigate();
-  // const [minDate, setMinDate] = useState()
-  // const [maxDate, setMaxDate] = useState()
-
-  // useEffect(() => {
-  //   const dates = getAvailableDates() // TODO: create this function in the client and matching route in the backend
-  //     .then((dates) => {
-  //       setMinDate(dates.minDate)
-  //       setMaxDate(dates.maxDate)
-  //     })
-  // }, [])
-
 
   const handleSubmit = async (event) => {
     event.preventDefault()
     setSaving(true)
 
     try {
-      await saveAppointment({
+      const { data: appointment } = await saveAppointment({
         veterinaire,
         date,
         name,
         email
       })
-      // TODO: rediriger l’utilisateur vers une page de confirmation de RDV
-   
-      navigate('/submitRDV')
+      console.log({appointment})
+      navigate('/submitRDV/' + appointment._id)
     } catch (error) {
-      // TODO: afficher une erreur compréhensible à l’utilisateur
-      console.error(error)
+        console.error(error)
     } finally {
       setSaving(false)
     }
@@ -64,7 +51,7 @@ const RDV = () =>{
           </div>
           <div>
             <label className={style.form__label} htmlFor="date">Choisissez la date de RDV</label>
-            <input className={style.form__input} required type="date" min={new Date().toISOString().substring(0,10)} name="date" id="date" onChange={(event) => setDate(event.target.value)}/>
+            <input className={style.form__input} required type="datetime-local" min={new Date().toISOString().substring(0,10)} name="date" id="date" onChange={(event) => setDate(event.target.value)}/>
           </div>
           <div>
             <label className={style.form__label} htmlFor="name">Nom complet</label>

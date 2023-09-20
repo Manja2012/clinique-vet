@@ -1,25 +1,40 @@
-import { useLocation } from 'react-router-dom';
-import style from './SubmitRDVForm.module.scss';
+// import { useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router";
+import style from "./SubmitRDVForm.module.scss";
+import css from "../../sass/Base.module.scss";
+import { getAppointment } from "../../api/api-client";
 
 const SubmitRDVForm = () => {
-  const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
+  const [confirmation, setConfirmation] = useState({});
+  const params = useParams()
 
-  const dateRDV = queryParams.get('date');
-  const nom = queryParams.get('name');
-  const email = queryParams.get('email');
-  const veterinaire = queryParams.get('veterinaire');
+  useEffect(() => {
+    const fetchConfirmation = async () => {
+      try {
+        const { data } = await getAppointment(params.id);
+        setConfirmation(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchConfirmation();
+  }, []);
 
-  return(
-
-  <div className={style.submit}>
-    <div className={style.submit__text}>Date du RDV : {dateRDV}</div>
-    <div className={style.submit__text}>Nom : {nom}</div>
-    <div className={style.submit__text}>E-mail : {email}</div>
-    <div className={style.submit__text}>Nom du vétérinaire : {veterinaire}</div>
-  </div>
-
-  )
-}
+  return (
+    <section className={css.section}>
+      <div className={css.container}>
+          <div key={confirmation.id}>
+            <div className={style.submit__text}>Date du RDV : {confirmation.date}</div>
+            <div className={style.submit__text}>Nom : {confirmation.name}</div>
+            <div className={style.submit__text}>E-mail : {confirmation.email}</div>
+            <div className={style.submit__text}>
+              Nom du vétérinaire : {confirmation.veterinaire}
+            </div>
+          </div>
+      </div>
+    </section>
+  );
+};
 
 export default SubmitRDVForm;
