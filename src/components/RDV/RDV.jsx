@@ -36,6 +36,9 @@ const RDV = () =>{
     }
   }
 
+  const now = new Date();
+
+
   return(
     <div className={style.flex}>
       <div className={style.form} >
@@ -51,7 +54,7 @@ const RDV = () =>{
           </div>
           <div>
             <label className={style.form__label} htmlFor="date">Choisissez la date de RDV</label>
-            <input className={style.form__input} required type="datetime-local" min={new Date().toISOString().substring(0,10)} name="date" id="date" onChange={(event) => setDate(event.target.value)}/>
+            <input className={style.form__input} required type="datetime-local" min={new Date().toISOString().slice(0, 16)} name="date" id="date" onChange={(event) => setDate(event.target.value)}/>
           </div>
           <div>
             <label className={style.form__label} htmlFor="name">Nom complet</label>

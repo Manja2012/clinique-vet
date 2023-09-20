@@ -2,9 +2,7 @@ import ClinicFunctions from '../../components/ClinicFunctions/ClinicFunctions.js
 const ClinicPage = () =>{  
 
   return(
-    <main>
-      <ClinicFunctions/>
-    </main>
+    <ClinicFunctions/>
   )
 }
 export default ClinicPage;

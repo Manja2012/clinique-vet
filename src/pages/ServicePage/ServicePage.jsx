@@ -2,9 +2,7 @@ import Service from '../../components/Service/Service.jsx';
 const ServicePage = () =>{  
 
   return(
-    <main>
-      <Service/>
-    </main>
+    <Service/>
   )
 }
 export default ServicePage;

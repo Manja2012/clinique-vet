@@ -5,10 +5,10 @@ import css from '../../sass/Base.module.scss';
 const PrendreRDV = () => {
 
   return (
-    <main> 
+    <> 
       <PageTitle text="Prendre un rendez-vous"/> 
       <RDV/>
-    </main>
+    </>
   )
 }
 

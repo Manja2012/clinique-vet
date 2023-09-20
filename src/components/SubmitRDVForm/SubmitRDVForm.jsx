@@ -21,11 +21,21 @@ const SubmitRDVForm = () => {
     fetchConfirmation();
   }, []);
 
+  const DateTime = new Date(confirmation.date);
+
   return (
     <section className={css.section}>
       <div className={css.container}>
           <div key={confirmation.id}>
-            <div className={style.submit__text}>Date du RDV : {confirmation.date}</div>
+            <div className={style.submit__text}>Date du RDV : {DateTime.toLocaleDateString('fr-FR', {
+              weekday: 'long',
+              day: 'numeric',
+              month: 'long',
+              year: 'numeric',
+
+              hour: '2-digit',
+              minute: '2-digit',
+            })}</div>
             <div className={style.submit__text}>Nom : {confirmation.name}</div>
             <div className={style.submit__text}>E-mail : {confirmation.email}</div>
             <div className={style.submit__text}>

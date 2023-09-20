@@ -4,11 +4,11 @@ import TeamBg from '../../components/Team/TeamBg.jsx';
 const TeamPage = () =>{  
 
   return(
-    <main>
+    <>
       <PageTitle text="L’équipe"/>
       <Team />
       <TeamBg />
-    </main>
+    </>
   )
 }
 export default TeamPage;

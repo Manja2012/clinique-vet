@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Dog_contacts from '../../images/dog_contacts.jpg'; 
-import { sendMessage } from '../../api/api-client.js'
+import { sendMessage } from '../../api/api-client.js';
 import style from './ContactsForm.module.scss';
 
 const apiBaseUrl = import.meta.env.VITE_API_BASE_URL

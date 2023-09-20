@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import { getReviews } from '../../api/api-client'
 import PageTitle from "../PageTitle/PageTitle";
 import ReviewCard from "./ReviewCard";
-// import { useReviews } from '../../business/use-reviews'
 import { reviewsRoute } from "../../api/routes";
 import css from "../../sass/Base.module.scss";
 import style from "./Reviews.module.scss";
