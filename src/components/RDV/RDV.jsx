@@ -28,7 +28,7 @@ const RDV = () =>{
         email
       })
       console.log({appointment})
-      navigate('/submitRDV/' + appointment._id)
+      navigate('/сonfirmationRDV/' + appointment._id)
     } catch (error) {
         console.error(error)
     } finally {

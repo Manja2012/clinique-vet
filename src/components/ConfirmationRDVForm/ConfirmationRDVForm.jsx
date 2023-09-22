@@ -1,7 +1,7 @@
 // import { useLocation } from 'react-router-dom';
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import style from "./ConfirmationRDVForm.scss";
+import style from "./ConfirmationRDVForm.module.scss";
 import css from "../../sass/Base.module.scss";
 import { getAppointment } from "../../api/api-client";
 
