@@ -1,21 +1,21 @@
 .team{
   @media screen and (min-width:768px){
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
   }
   @media screen and (min-width:768px){
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
   }
 }
 .team__image{
   border-radius: 8px;
   width: 350px;
   margin: 0 auto;
-  @media screen and (min-width: 768px) {
-    width: 325px;
-    height: 255px;
-  }
+    @media screen and (min-width: 768px) {
+      width: 325px;
+      height: 255px;
+    }
 }
 .team__title{
   margin-bottom: 4px;
@@ -36,26 +36,25 @@
   border-left: 1px solid #EEEEEE;
   border-right: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE;
-  @media screen and (min-width:768px) and (max-width:1199px){
-  flex-grow: 1;
-  }
+    @media screen and (min-width:768px) and (max-width:1199px){
+      flex-grow: 1;
+    }
 }
 .team__item{ 
   max-width: 450px;
   text-align: center;
-  
-  @media screen and (min-width:768px){
-  width: 50%;
-  margin:15px;
-  flex-basis:calc((100% - 4*15px)/2);
-  }
+    @media screen and (min-width:768px){
+      width: 50%;
+      margin:15px;
+      flex-basis:calc((100% - 4*15px)/2);
+    }
   
   &:not(:last-child){
-  margin-bottom: 30px;
+    margin-bottom: 30px;
   }
  
   &:not(:last-child){
-  margin-bottom: 30px;
+   margin-bottom: 30px;
   }
 }
 .team__overlay{
@@ -81,8 +80,8 @@
   
   .team__link:hover &,
   .team__link:focus &{
-  opacity: 1;
-  transform: translateY(0);  
+    opacity: 1;
+    transform: translateY(0);  
   }
 }
 .team__link{
@@ -94,10 +93,9 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  @media screen and (min-width:768px) and (max-width:1199px){
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    @media screen and (min-width:768px) and (max-width:1199px){
+      display: flex;
+      flex-direction: column;
     }
 
   &:hover,

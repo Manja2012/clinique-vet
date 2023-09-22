@@ -1,11 +1,11 @@
 // import { useLocation } from 'react-router-dom';
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import style from "./SubmitRDVForm.module.scss";
+import style from "./ConfirmationRDVForm.scss";
 import css from "../../sass/Base.module.scss";
 import { getAppointment } from "../../api/api-client";
 
-const SubmitRDVForm = () => {
+const ConfirmationRDVForm = () => {
   const [confirmation, setConfirmation] = useState({});
   const params = useParams()
 
@@ -47,4 +47,4 @@ const SubmitRDVForm = () => {
   );
 };
 
-export default SubmitRDVForm;
+export default ConfirmationRDVForm;
