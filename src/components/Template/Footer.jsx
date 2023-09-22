@@ -13,10 +13,7 @@ const Footer = () => {
           <ul>
             <li className={style.footer__title}>Mention Légales</li>
             <li className={style.footer__item}>
-              <Link className={style.footer__link} to="#">CGU</Link>
-            </li>
-            <li className={style.footer__item}>
-              <Link className={style.footer__link} to="#">RGPD</Link>
+              <Link className={style.footer__link} to="https://www.documentslegaux.fr/commerce/conditions-generales-d-un-site-web/preview.aspx?webuser_data_id=168163578">CGU</Link>
             </li>
           </ul>
         </div>
