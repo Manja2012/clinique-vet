@@ -11,10 +11,13 @@ const Footer = () => {
         <h2 className={css.hidden}>footer</h2>
         <div className={style.footer__list}>
           <ul>
-            <li className={style.footer__title}>Mention Légales</li>
             <li className={style.footer__item}>
-              <Link className={style.footer__link} to="https://www.documentslegaux.fr/commerce/conditions-generales-d-un-site-web/preview.aspx?webuser_data_id=168163578">CGU</Link>
+              <Link className={style.footer__link} to="legalnotice">Mention Légales</Link>
             </li>
+            <li className={style.footer__item}>
+              <Link className={style.footer__link} to="/cgu">CGU</Link>
+            </li>
+            
           </ul>
         </div>
         <div className={style.footer__list}>

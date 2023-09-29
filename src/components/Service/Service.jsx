@@ -13,6 +13,7 @@ const Service = () => {
           cardServiceExamples.map(card => (
           <li className={style.card__item} key={card.alt}>
             <CardExample
+              title={card.title}
               img={card.img}
               description={card.description}
               alt={card.alt}

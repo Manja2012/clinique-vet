@@ -1,10 +1,14 @@
 import style from './CardExample.module.scss';
 
-const CardExample = ({ description, alt, img}) => {
+const CardExample = ({ description, title, alt, img}) => {
   return (
     <>
       <img className={style.card__image} src={img} alt={alt} />
-      <p className={style.card__text}>{description}</p>
+      <div>
+        <h2 className={style.card__title}>{title}</h2>
+        <p className={style.card__text}>{description}</p>
+      </div>
+      
     </>
   );
 }

@@ -7,6 +7,10 @@ import ConfirmationRDV from "./pages/ConfirmationRDV/ConfirmationRDV.jsx";
 import ClinicPage from "./pages/ClinicPage/ClinicPage.jsx";
 import ServicePage from "./pages/ServicePage/ServicePage.jsx";
 import TeamPage from "./pages/TeamPage/TeamPage.jsx";
+import LegalNotice from "./pages/LegalNotice/LegalNotice.jsx";
+import CGU from "./pages/CGU/CGU.jsx";
+import LoginPage from "./pages/LoginPage/LoginPage.jsx";
+import AdminPage from "./pages/AdminPage/AdminPage.jsx";
 
 
 function App() {
@@ -20,6 +24,10 @@ function App() {
         <Route path='/clinic' element={<ClinicPage/>} />
         <Route path='/service' element={<ServicePage/>} />
         <Route path='/team' element={<TeamPage/>} />
+        <Route path='/legalnotice' element={<LegalNotice/>} />
+        <Route path='/cgu' element={<CGU/>} />
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/admin' element={<AdminPage />} />
       </Route>
     </Routes>
   );
