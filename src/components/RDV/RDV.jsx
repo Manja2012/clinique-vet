@@ -47,7 +47,7 @@ const RDV = () =>{
             <label className={style.form__label} htmlFor="veterinaire" >Choisissez le nom du vétérinaire</label> 
             <select className={style.form__input} required type="text" placeholder="Rechercher par nom du vétérinaire" name="veterinaire" id="veterinaire" onChange={(event) => setVeterinaire(event.target.value)}>
               <option value="">[Choisissez une option]</option>
-              <option value="Dr. Alexandre Shulesho">Dr. Alexandre Shulesho</option>
+              <option value="Dr. Alexandre Shulesho">Dr. Alexandre Shuleshko</option>
               <option value="Dr. Nikolai Glushkov">Dr. Nikolai Glushkov</option>
               <option value="Dr. Elina Avezova">Dr. Elina Avezova</option>
             </select>
@@ -72,7 +72,7 @@ const RDV = () =>{
           </div>
         </form>
       </div>
-      <div className={style.form__image}>true
+      <div className={style.form__image}>
         <img className={style.form__photo} src={Cat} alt='cat_photo' />
       </div>
     </div>  

@@ -47,11 +47,11 @@ const AdminPage = () => {
   return (
     <>
       <header>
-        <h1 className={style.title} >Back-office Vet-Clinique</h1>
+        <PageTitle text="Back-office Vet-Clinique"/>
       </header>
       <main>
-      <PageTitle text="Liste des RDV"/>
- 
+     
+  <h2 className={style.title}>Liste des RDV</h2>
 
         <ul className={style.list}>
           {

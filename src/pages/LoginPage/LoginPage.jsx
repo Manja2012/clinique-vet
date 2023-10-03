@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 import { signIn } from "../../api/api-client.js";
+import PageTitle from '../../components/PageTitle/PageTitle.jsx';
+import css from '../../components/Contacts/ContactsForm.module.scss';
+import style from '../AdminPage/AdminPage.module.scss';
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -22,22 +24,20 @@ const LoginPage = () => {
 
   return (
     <>
-      <header>
-        <h1>Connexion</h1>
-      </header>
-      <form onSubmit={login}>
+      <PageTitle text="Connexion"/>
+      <form className={style.form} onSubmit={login}>
         <fieldset>
-          <legend className="">Connexion</legend>
-          <div className="">
-            <label htmlFor="email">Adresse email :</label>
-            <input value={email} onChange={event => setEmail(event.target.value)} type="text" id="email" />
-          </div>
-          <div className="">
-            <label htmlFor="password">Mot de passe :</label>
-            <input value={password} onChange={event => setPassword(event.target.value)} type="password" id="password" />
+          <legend className={style.legend}>Connexion</legend>
+          <div>
+            <label className={css.form__label} htmlFor="email">Adresse email :</label>
+            <input className={css.form__input} value={email} onChange={event => setEmail(event.target.value)} type="text" id="email" />
           </div>
           <div>
-            <button type="submit">Se connecter</button>  
+            <label className={css.form__label} htmlFor="password">Mot de passe :</label>
+            <input className={css.form__input} value={password} onChange={event => setPassword(event.target.value)} type="password" id="password" />
+          </div>
+          <div>
+            <button className={style.button} type="submit">Se connecter</button>  
           </div>
         </fieldset>
       </form>

@@ -38,9 +38,27 @@
 }
 .title{
   text-align: center;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 32px;
   line-height: 1.43;
   color: var(--accent-color);
     
+}
+.legend{
+  font-size: 24px;
+  line-height: 1.43;
+}
+.form{
+  padding: 20px;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    margin: 0 auto;
+    width: 70%;
+    padding: 30px 104px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    
+    padding: 50px 168px;
+  }
 }
