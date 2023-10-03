@@ -1,17 +1,19 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { signIn } from "../../api/api-client.js";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate()
 
-  const login = event => {
+  const login = async event => {
     event.preventDefault();
     // Appel à l'API pour se connecter
     try {
-      signIn(email, password)
+      await signIn(email, password)
+      navigate("/admin")
     } catch (error) {
       // TODO: Afficher l'erreur à l'utilisateur
       console.error(error.message)
@@ -35,9 +37,7 @@ const LoginPage = () => {
             <input value={password} onChange={event => setPassword(event.target.value)} type="password" id="password" />
           </div>
           <div>
-           <Link to="/admin">
-              <button type="submit">Se connecter</button>  
-           </Link> 
+            <button type="submit">Se connecter</button>  
           </div>
         </fieldset>
       </form>

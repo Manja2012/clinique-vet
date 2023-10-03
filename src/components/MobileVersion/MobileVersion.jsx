@@ -13,7 +13,7 @@ const MobileVersion = () =>{
             <PageTitle text="La clinique" />
             <div className={style.card__item} >
               <img className={style.card__image} src={Dog} alt="dog" />
-              <p className={style.card__text}>Lorem ipsum dolor sit amet consectetur. Sit amet facilisi massa lacus quam sed enim turpis dignissim. Lecea amet mi. Lacus erat habitasse turpis semper nunc massa </p>
+              <p className={style.card__text}>Nous savons que les urgences peuvent survenir à tout moment. C'est pourquoi nous proposons des soins vétérinaires d'urgence 24/7. Si votre animal a une situation critique, vous pouvez compter sur notre aide. </p>
             </div>
           </div> 
         </div>
