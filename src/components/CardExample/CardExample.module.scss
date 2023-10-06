@@ -19,13 +19,11 @@
   }
   &__text {
     padding: 10px;
-    margin-top: 28px;
     font-size: 20px;
     line-height: 29px;
     color: var(--text-color);
     @media screen and (min-width: 768px) {
       padding: 20px;
-      margin-top: 0;
       text-align: left;
     }
     @media screen and (min-width: 1200px) {
@@ -34,6 +32,7 @@
     }
   }
   &__title{
+    margin-top: 12px;
     font-size: 26px;
     line-height: 28px;
     color: var(--accent-color);
