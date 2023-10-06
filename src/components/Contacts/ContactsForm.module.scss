@@ -37,6 +37,10 @@
       outline: 1px solid var(--accent-color);
     }
   }
+  &__text_star{
+    margin-top: 10px;
+    text-align: left;
+  }
   &__comment {
     display: block;
     width: 100%;
@@ -95,7 +99,7 @@
     letter-spacing: 0.06em;
     color: var(--main-background-color);
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 18px;
     border: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -118,4 +122,15 @@
   @media screen and (min-width: 768px) {
     display: flex;
   }
+}
+/* Стиль для сообщений об ошибке */
+.errorMessage {
+  background-color: #ff6b6b; /* Красный цвет */
+  color: white; /* Белый цвет текста */
+}
+
+/* Стиль для сообщений об успешной отправке */
+.successMessage {
+  background-color: #5cb85c; /* Зеленый цвет */
+  color: white; /* Белый цвет текста */
 }

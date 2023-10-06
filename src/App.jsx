@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import { useState } from 'react';
 import Template from "./components/Template/HeaderFooter.jsx";
 import HomePage from "./pages/HomePage/HomePage.jsx";
 import ContactsPage from "./pages/ContactsPage/ContactsPage.jsx";
@@ -11,25 +12,43 @@ import LegalNotice from "./pages/LegalNotice/LegalNotice.jsx";
 import CGU from "./pages/CGU/CGU.jsx";
 import LoginPage from "./pages/LoginPage/LoginPage.jsx";
 import AdminPage from "./pages/AdminPage/AdminPage.jsx";
-
+import Modal from './components/Modal/Modal.jsx'; 
 
 function App() {
+  const [isOk, setOk] = useState(localStorage.getItem('isOk') === 'true')
   return (
-    <Routes>
-      <Route path="/" element={<Template />}>
-        <Route index element={<HomePage />} />
-        <Route path='/rdv' element={<PrendreRDV />} />
-        <Route path='/contacts' element={<ContactsPage/>} />
-        <Route path='/сonfirmationRDV/:id' element={<ConfirmationRDV/>} />
-        <Route path='/clinic' element={<ClinicPage/>} />
-        <Route path='/service' element={<ServicePage/>} />
-        <Route path='/team' element={<TeamPage/>} />
-        <Route path='/legalnotice' element={<LegalNotice/>} />
-        <Route path='/cgu' element={<CGU/>} />
-        <Route path='/login' element={<LoginPage />} />
-        <Route path='/admin' element={<AdminPage />} />
-      </Route>
-    </Routes>
+   <>
+      {
+          !isOk && (
+              <Modal title="Cookies">
+                <span className="mx-2">
+                  Notre site utilise des cookies, acceptez-vous ?
+                </span>
+                <button className="button_cookies" onClick={() => {
+                  localStorage.setItem('isOk', 'true');
+                  setOk(true)
+                  notify()
+                }}>Oui</button>
+              </Modal>
+        )
+      }
+        
+      <Routes>
+        <Route path="/" element={<Template />}>
+          <Route index element={<HomePage />} />
+          <Route path='/rdv' element={<PrendreRDV />} />
+          <Route path='/contacts' element={<ContactsPage/>} />
+          <Route path='/сonfirmationRDV/:id' element={<ConfirmationRDV/>} />
+          <Route path='/clinic' element={<ClinicPage/>} />
+          <Route path='/service' element={<ServicePage/>} />
+          <Route path='/team' element={<TeamPage/>} />
+          <Route path='/legalnotice' element={<LegalNotice/>} />
+          <Route path='/cgu' element={<CGU/>} />
+          <Route path='/login' element={<LoginPage />} />
+          <Route path='/admin' element={<AdminPage />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 export default App;

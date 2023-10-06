@@ -54,10 +54,10 @@ const Footer = () => {
             </li>
             <li>
               <div className={style.social}>
-                <Link to="https://www.facebook.com/biomirdp/?locale=ru_RU" className={style.social__link}>
+                <Link to="https://www.facebook.com/biomirdp/?locale=ru_RU" target="_blank" className={style.social__link}>
                   <BsFacebook className={style.social__icon} size={30}/>
                 </Link>
-                <Link to="https://www.instagram.com/biomir.dp/" className={style.social__link}>
+                <Link to="https://www.instagram.com/biomir.dp/"  target="_blank" className={style.social__link}>
                   <BsInstagram className={style.social__icon} size={30}/>
                 </Link>
               </div>

@@ -13,7 +13,7 @@ const TeamMember = ({ description, to, name, img, specialty, fbProfile, instagra
         </Link>
         <div className={style.team__exampl}>
             <h2 className={style.team__title}>{name}</h2>
-            <p className={style.team__text}>{specialty}</p>
+            <h3 className={style.team__text}>{specialty}</h3>
             <Social
               fbProfile={fbProfile}
               instagramProfile={instagramProfile}

@@ -8,7 +8,7 @@ const ClinicsDescription = () =>{
   return(
     <section className={css.section}>
       <div className={css.container}>
-        <PageTitle text="Urgences et Consultants vétérinaires Clinique  vétérinaire d'urgences"/>
+        <PageTitle h2 text="Urgences et Consultants vétérinaires Clinique vétérinaire d'urgences"/>
         <ul className={style.card__list}>
         {
           cardExamples.map(card => (

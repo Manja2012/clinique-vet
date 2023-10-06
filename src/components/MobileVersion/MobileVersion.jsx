@@ -10,7 +10,7 @@ const MobileVersion = () =>{
       <section className={css.section} >
         <div className={css.container}>
           <div className={style.card}>
-            <PageTitle text="La clinique" />
+            <PageTitle h2 text="La clinique" />
             <div className={style.card__item} >
               <img className={style.card__image} src={Dog} alt="dog" />
               <p className={style.card__text}>Nous savons que les urgences peuvent survenir à tout moment. C'est pourquoi nous proposons des soins vétérinaires d'urgence 24/7. Si votre animal a une situation critique, vous pouvez compter sur notre aide. </p>
@@ -20,7 +20,7 @@ const MobileVersion = () =>{
       </section>
       <section  className={css.mobil}>
         <div className={style.container}>
-          <PageTitle text="Notre équipe" />
+          <PageTitle h2 text="Notre équipe" />
           <Team />  
         </div>
       </section>

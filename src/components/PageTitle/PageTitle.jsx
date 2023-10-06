@@ -1,10 +1,10 @@
 import style from './PageTitle.module.scss';
 
-const PageTitle = ({text}) => {
+const PageTitle = ({ text, h2 }) => {
   return (
-    <div>
-      <h1 className={style.title}>{text}</h1>
-    </div>
+      h2 
+        ? <h2 className="title">{text}</h2>
+        : <h1>{text}</h1>
   )
 }
 

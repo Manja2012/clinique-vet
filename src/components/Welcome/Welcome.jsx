@@ -7,7 +7,7 @@ const Welcome = () =>{
     <>
       <section className={style.clinic_presentation}>
         <div className={css.container}>
-          <h1 className={style.main__title}> Bienvenue chez BIOMIR</h1>
+          <h1 className={style.main__title}> Clinique vétérinaire Biomir</h1>
           <Link to="/rdv"><button type="button" className={style.button}>Prendre RDV</button></Link>
         </div>
       </section>

@@ -25,7 +25,7 @@ const Reviews = () => {
   return (
     <section className={css.section}>
       <div className={css.container}>
-        <PageTitle text="Les avis de nos clients" />
+        <PageTitle h2 text="Les avis de nos clients" />
         <ul className={style.reviews}>
           {reviews.map((card) => (
             <li className={style.reviews__item} key={card.name}>
