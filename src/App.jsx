@@ -29,6 +29,11 @@ function App() {
                   setOk(true)
                   notify()
                 }}>Oui</button>
+                <button className="button_cookies" onClick={() => {
+                  localStorage.setItem('isOk', 'true');
+                  setOk(true)
+                  notify()
+                }}>Paramètres les cookies</button>
               </Modal>
         )
       }
